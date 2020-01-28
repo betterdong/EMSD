@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  EMSD
+//
+//  Created by 李国栋 on 2019/6/2.
+//  Copyright © 2019年 李国栋. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "Masonry.h"
+#import "AppDelegate.h"
+
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height                            //屏幕高度
+#define ScreenWidth [UIScreen mainScreen].bounds.size.width                             //屏幕宽度
+
+#import "Extensions.h"
+#import "CollectionHShowView.h"
+//#import "SubmitResultView.h"
+
+#import "SYTool.h"
+//#import "DatePicker.h"
+//#import "BatteryView.h"
+#import "RequestManager.h"
+
+// 定义一个加上'w'前缀的weak变量，比如 DEFINE_WEAK(self)会生成 wself
+#define DEFINE_WEAK(variable) __weak typeof(variable) weak##variable = variable;
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#endif /* PrefixHeader_pch */
